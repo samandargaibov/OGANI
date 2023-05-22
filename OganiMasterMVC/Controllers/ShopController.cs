@@ -16,7 +16,7 @@ namespace OganiMasterMVC.Controllers
         public IActionResult Index()
         {
             var categories = _dbContext.Categories.ToList();
-            var products = _dbContext.Products.Take(12).ToList();
+            var products = _dbContext.Products.Skip(8).ToList();
 
             var viewModel = new ShopViewModel
             {
